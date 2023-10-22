@@ -312,8 +312,8 @@ source-repository-package
 
 source-repository-package
   type: git
-  location: https://github.com/ergolabs/cardano-dex-contracts
-  tag: c25c8ab7daf52871d29efd00d3dac236cc9d6a36
+  location: https://github.com/teddy-swap/cardano-dex-contracts
+  tag: 7bb405853135d504f8e0b19ac9233631f9590805
   subdir:
     cardano-dex-contracts-offchain
 
