@@ -34,7 +34,7 @@ let
       "https://github.com/input-output-hk/ouroboros-network"."cb9eba406ceb2df338d8384b35c8addfe2067201" = "3ElbHM1B5u1QD0aes1KbaX2FxKJzU05H0OzJ36em1Bg=";
       "https://github.com/input-output-hk/iohk-monitoring-framework"."066f7002aac5a0efc20e49643fea45454f226caa" = "0ia5UflYEmBYepj2gkJy9msknklI0UPtUavMEGwk3Wg=";
       "https://github.com/input-output-hk/quickcheck-dynamic"."c272906361471d684440f76c297e29ab760f6a1e" = "TioJQASNrQX6B3n2Cv43X2olyT67//CFQqcpvNW7N60=";
-      "https://github.com/input-output-hk/cardano-node"."1.35.3-rc1" = "4IrheFeoWfvkZQndEk4fGUkOiOjcVhcyXZ6IqmvkDgg=";
+      "https://github.com/input-output-hk/cardano-node"."8762a10efe3f9f97939e3cb05edaf04250456702" = "LwoQejDDA9P7dbl8z3nFbEJDDim0Y7oHUOgf4EH2Xig=";
       "https://github.com/input-output-hk/ekg-forward"."297cd9db5074339a2fb2e5ae7d0780debb670c63" = "jwj/gh/A/PXhO6yVESV27k4yx9I8Id8fTa3m4ofPnP0=";
       "https://github.com/input-output-hk/optparse-applicative"."7497a29cb998721a9068d5725d49461f2bba0e7a" = "1gvsrg925vynwgqwplgjmp53vj953qyh3wbdf34pw21c8r47w35r";
       "https://github.com/input-output-hk/Win32-network"."3825d3abf75f83f406c1f7161883c438dac7277d" = "19wahfv726fa3mqajpqdqhnl9ica3xmf68i254q45iyjcpj1psqx";
@@ -45,12 +45,14 @@ let
       "https://github.com/input-output-hk/hedgehog-extras"."714ee03a5a786a05fc57ac5d2f1c2edce4660d85" = "6KQFEzb9g2a0soVvwLKESEbA+a8ygpROcMr6bkatROE=";
       "https://github.com/teddy-swap/cardano-dex-contracts"."c7fc4c98029a3d299a3853b6ca762fd1314a8109" = "nytwM6R2jGmYzIG2xdAgjmG5gvmssBOUN02PnnQag1I=";
       "https://github.com/ergolabs/hlog"."19dfa3a6e696a3f63fc3539cd6b7a3fc4d999853" = "Lvmj1oLuXmktrboXh/BrXqLPf8FxSCXIf99GnBXu0Bk=";
+      "https://github.com/daleiz/rocksdb-haskell"."109af08f95b40f458d4933e3725ecb3e59337c39" = "1i1ya491fapa0g96527krarv0w0iybizqcz518741iw06hhpikiy";
     };
 
     modules = [
       {
         packages = {
           ergo-hs-common.package.buildable = false;
+          spectrum.package.buildable = false;
           cardano-tx.package.buildable = false;
           dex-core.package.buildable = false;
           quickblue.package.buildable = false;
@@ -59,6 +61,8 @@ let
           submit-api.package.buildable = false;
           datum-keeper-client.package.buildable = false;
           algebra-core.package.buildable = false;
+          spectrum-prelude.package.buildable = false;
+          ledger-sync.package.buildable = false;
 
           # Broken due to haddock errors. Refer to https://github.com/input-output-hk/plutus/blob/master/nix/pkgs/haskell/haskell.nix
           plutus-ledger.doHaddock = false;
